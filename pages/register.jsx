@@ -11,9 +11,10 @@ const Register = () => {
             const user = await createUserWithEmailAndPassword(auth, registerEmail, registerPassword);
             console.log(user);
         } catch (error) {
-            console.log(error.message);
+            alert(error.message);
         }
     };
+
     return (
         <div>
             <h1>Register User</h1>
@@ -23,7 +24,7 @@ const Register = () => {
                 <input type="password" placeholder="Password" autoComplete='new-password'
                     onChange={(e) => { setRegisterPassword(e.target.value); }} />
             </form>
-                <button onClick={register}>Create User</button>
+            <button onClick={register}>Create User</button>
         </div>
     );
 };
