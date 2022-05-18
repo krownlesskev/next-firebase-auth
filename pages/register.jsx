@@ -1,7 +1,11 @@
 const register = () => {
+
+};
+
+const Register = () => {
     return (
         <div>register page</div>
     );
 };
 
-export default register;
+export default Register;

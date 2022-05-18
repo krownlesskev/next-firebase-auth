@@ -1,7 +1,15 @@
-const signin = () => {
+const login = () => {
+
+};
+
+export const logout = () => {
+
+};
+
+const Signin = () => {
     return (
         <div>signin page</div>
     );
 };
 
-export default signin;
+export default Signin;
