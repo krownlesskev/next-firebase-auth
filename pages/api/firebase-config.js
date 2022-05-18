@@ -1,10 +1,9 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth';
 
-import 'dotenv/config';
-
 const firebaseConfig = {
-    apiKey: process.env.API_KEY,
+    // API key needs to be prefixed with NEXT_PUBLIC to expose to browser.
+    apiKey: process.env.NEXT_PUBLIC_API_KEY,
     authDomain: "next-firebase-auth-2e069.firebaseapp.com",
     projectId: "next-firebase-auth-2e069",
     storageBucket: "next-firebase-auth-2e069.appspot.com",
@@ -15,5 +14,4 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-// We need to access this from othe parts of our app
 export const auth = getAuth(app);
