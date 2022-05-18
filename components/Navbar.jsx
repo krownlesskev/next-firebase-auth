@@ -8,13 +8,13 @@ const Navbar = ({ user }) => {
             <div className={styles.links}>
                 {!user ?
                     <>
-                        <Link  href='/signin'>Sign In</Link>
-                        <Link  href='/register'>Register</Link>
+                        <Link href='/signin'>Sign In</Link>
+                        <Link href='/register'>Register</Link>
                     </>
                     :
                     <>
                         <Link href='/'>Home</Link>
-                        <Link href='/' onClick={logout}>Sign Out</Link>
+                        <p className={styles.glowText} onClick={logout}>Sign Out</p>
                     </>
                 }
             </div>
