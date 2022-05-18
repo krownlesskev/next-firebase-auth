@@ -15,7 +15,7 @@ const Register = () => {
             router.push('/');
             console.log(user);
         } catch (error) {
-            alert(error.message);
+            console.log(error.message);
         }
     };
 
