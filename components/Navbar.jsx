@@ -14,7 +14,7 @@ const Navbar = ({ user }) => {
                     :
                     <>
                         <Link href='/'>Home</Link>
-                        <a href='/' onClick={logout}>Sign Out</a>
+                        <Link href='/' onClick={logout}>Sign Out</Link>
                     </>
                 }
             </div>
