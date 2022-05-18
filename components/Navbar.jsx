@@ -17,7 +17,6 @@ const Navbar = ({ user }) => {
                         <a href='/' onClick={logout}>Sign Out</a>
                     </>
                 }
-                <a href='#'>{user?.email}</a>
             </div>
         </div>
     );

@@ -1,4 +1,5 @@
-import { signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth';
+import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { auth } from './api/firebase-config';
 
@@ -10,9 +11,12 @@ const Signin = () => {
     const [loginEmail, setLoginEmail] = useState("");
     const [loginPassword, setLoginPassword] = useState("");
 
+    const router = useRouter();
+
     const login = async () => {
         try {
             const user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
+            router.push('/');
             console.log(user);
         } catch (error) {
             alert(error.message);
