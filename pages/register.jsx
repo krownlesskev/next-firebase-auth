@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from './api/firebase-config';
-import Router, { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 
 const Register = () => {
     const [registerEmail, setRegisterEmail] = useState("");
